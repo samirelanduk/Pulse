@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+    background-color: white;
+}
+
+header {
+    height: 100vh;
+    background-color: #1e272e;
+}
+
+img.logo {
+    width: 70%;
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
