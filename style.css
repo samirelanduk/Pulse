@@ -412,6 +412,17 @@ li.active a {
     background-color: #b34f29 !important;
 }
 
+.mu-event-time {
+    color: #b34f29 !important;
+}
+
+.mu-schedule-menu li a {
+    border: 1px solid #b34f29 !important;
+}
+
+.mu-schedule-menu li a:hover {
+    background-color: #b34f29 !important;
+}
 
 
 /*--------------------*/
