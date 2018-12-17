@@ -399,33 +399,10 @@ button:focus {
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
-
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
 	color: #fff;
-}
-
-
-
-li.active a {
-    background-color: #b34f29 !important;
-}
-
-.mu-event-time {
-    color: #b34f29 !important;
-}
-
-.mu-schedule-menu li a {
-    border: 1px solid #b34f29 !important;
-}
-
-.mu-schedule-menu li a:hover {
-    background-color: #b34f29 !important;
-}
-
-#mu-venue {
-    background-color: #b34f29;
 }
 
 /*--------------------*/
@@ -1538,10 +1515,6 @@ li.active a {
 
 @media (max-width: 767px) {
 
-
-    .mu-navbar .navbar-toggle, .mu-navbar .navbar-toggle:hover, .mu-navbar .navbar-toggle:focus {
-        background-color: #b34f29;
-    }
 
 	.mu-navbar .navbar-toggle .icon-bar {
 		background-color: #fff;
