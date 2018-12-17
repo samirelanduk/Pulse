@@ -367,8 +367,8 @@ button:focus {
 /*--------------------*/
 
 #mu-hero .navbar-default {
-	background-color: #fff;
-	border-color: #e7e7e7;
+	background-color: #1e272e;
+	border-color: #d2dae2;
 	padding: 5px 0;
 }
 
@@ -387,8 +387,14 @@ button:focus {
 	line-height: 20px;
 }
 
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+    margin-top: -20px;
+}
+
 .mu-navbar .mu-menu li a {
-	color: #333;
+	color: #eee;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
@@ -398,6 +404,12 @@ button:focus {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
 	color: #fff;
+}
+
+
+
+li.active a {
+    background-color: #b34f29 !important;
 }
 
 
@@ -1513,10 +1525,13 @@ button:focus {
 @media (max-width: 767px) {
 
 
-
+    .mu-navbar .navbar-toggle, .mu-navbar .navbar-toggle:hover, .mu-navbar .navbar-toggle:focus {
+        background-color: #b34f29;
+    }
 
 	.mu-navbar .navbar-toggle .icon-bar {
 		background-color: #fff;
+
 	}
 
 	.mu-navbar .mu-menu {
@@ -1618,7 +1633,7 @@ button:focus {
 		height: 75px;
 		width: 75px;
 		font-size: 12px;
-		margin: 0 5px;
+		margin: 0 2px;
 	}
 
 	.mu-video-close-btn {
@@ -1715,6 +1730,8 @@ button:focus {
 		height: 56px;
 		width: 56px;
 		font-size: 10px;
+        margin: 0px;
+
 	}
 
 	.mu-event-counter-block span {
