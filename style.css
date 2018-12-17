@@ -252,9 +252,17 @@ button:focus {
 	font-family: 'Montserrat', sans-serif;
 	display: inline-block;
 	font-weight: 600;
-	background: #fff;
 	padding: 5px 20px;
-	margin-bottom: 30px;
+    width: 100%;
+}
+
+.mu-logo img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -284,7 +292,7 @@ button:focus {
 .mu-hero-featured-area {
 	display: inline;
 	float: left;
-	padding: 60px 0 150px;
+	padding: 30px 0 150px;
 	width: 100%;
 }
 
@@ -1504,9 +1512,7 @@ button:focus {
 
 @media (max-width: 767px) {
 
-	.mu-logo img {
-		width: 150px;
-	}
+
 
 
 	.mu-navbar .navbar-toggle .icon-bar {
@@ -1575,7 +1581,6 @@ button:focus {
 	}
 
 	.mu-logo {
-		margin-bottom: 10px;
 		font-size: 30px;
 	}
 
@@ -1700,9 +1705,7 @@ button:focus {
 
 @media (max-width: 360px) {
 
-	.mu-logo img {
-		width: 120px;
-	}
+
 
 	.mu-hero-featured-area {
 		padding: 30px 0 30px;
