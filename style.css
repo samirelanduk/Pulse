@@ -60,6 +60,10 @@ a {
 	color: #2f2f2f;
 }
 
+.panel-body a {
+    color: #0652DD;
+}
+
 a:hover,
 a:focus {
 	outline: none;
