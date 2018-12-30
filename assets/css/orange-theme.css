@@ -8,9 +8,9 @@ Author URI : http://www.markups.io/
 
 .mu-hero-overlay,
 .mu-video-overlay {
-	background-color: #e15f41;/* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #64b3f4, #e15f41);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #64b3f4, #e15f41); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-color: #49baa6;/* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #49baa6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #49baa6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -36,7 +36,7 @@ Author URI : http://www.markups.io/
 .mu-navbar .mu-menu li a:hover,
 .mu-navbar .mu-menu li a:focus,
 .mu-single-event .mu-event-time {
-	color: #e15f41;
+	color: #49baa6;
 }
 
 .mu-speakers-slider .slick-next,
@@ -54,35 +54,35 @@ Author URI : http://www.markups.io/
 .mu-schedule-menu li.active a,
 .mu-schedule-menu li.active a:hover,
 .mu-schedule-menu li.active a:focus {
-	background-color: #e15f41;
+	background-color: #49baa6;
 }
 
 .mu-social-media a:hover,
 .mu-social-media a:focus {
-	border: 1px solid #e15f41;
-	color: #e15f41;
+	border: 1px solid #49baa6;
+	color: #49baa6;
 }
 
 .mu-contact-form .form-control:focus,
 .mu-schedule-menu li a {
-	border: 1px solid #e15f41;
+	border: 1px solid #49baa6;
 }
 
 .mu-send-msg-btn,
 .mu-register-btn:hover,
 .mu-register-btn:focus,
 .mu-popular-price .mu-register-btn {
-	border: 1px solid #e15f41;
-	background-color: #e15f41;
+	border: 1px solid #49baa6;
+	background-color: #49baa6;
 }
 
 .mu-faq-content .panel-default > .panel-heading + .panel-collapse > .panel-body {
-	border-top-color: #e15f41;
+	border-top-color: #49baa6;
 
 }
 
 .mu-reg-submit-btn:hover,
 .mu-reg-submit-btn:focus {
-	background-color: #e15f41;
-	border: 2px solid #e15f41;
+	background-color: #49baa6;
+	border: 2px solid #49baa6;
 }
