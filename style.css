@@ -245,6 +245,7 @@ button:focus {
 	float: left;
 	text-align: center;
 	width: 100%;
+    margin-left: -15px;
 }
 
 .mu-logo {
@@ -258,11 +259,13 @@ button:focus {
 
 .mu-logo img {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 
@@ -388,9 +391,9 @@ button:focus {
 }
 
 .navbar-brand img {
-    height: 60px;
+    height: 50px;
     width: auto;
-    margin-top: -20px;
+    margin-top: -15px;
 }
 
 .mu-navbar .mu-menu li a {
@@ -1392,6 +1395,10 @@ button:focus {
 }
 
 @media (max-width: 991px) {
+
+    .mu-logo-area {
+        margin-left: 0px;
+    }
 
 	.mu-primary-btn {
 		font-size: 14px;
