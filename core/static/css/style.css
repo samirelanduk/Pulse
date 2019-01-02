@@ -60,8 +60,13 @@ a {
 	color: #2f2f2f;
 }
 
-.panel-body a {
+.panel-body a, .mu-register-area a {
     color: #0652DD;
+}
+
+.mu-register-area p {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 a:hover,
