@@ -250,11 +250,14 @@ button:focus {
 }
 
 .mu-logo-area {
-	display: inline;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 	float: left;
 	text-align: center;
 	width: 100%;
     margin-left: -15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .mu-logo {
@@ -268,13 +271,13 @@ button:focus {
 
 .mu-logo img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -1530,7 +1533,9 @@ button:focus {
 }
 
 @media (max-width: 767px) {
-
+    .mu-logo-area {
+        display: inline;
+    }
 
 	.mu-navbar .navbar-toggle .icon-bar {
 		background-color: #fff;
