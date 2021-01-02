@@ -1,10 +1,15 @@
 import os
-from .secrets import SECRET_KEY
+
+DEBUG = True
+
+if DEBUG:
+    from .secrets import SECRET_KEY
+    ALLOWED_HOSTS = []
+else:
+    SECRET_KEY = os.environ["SECRETKEY"]
+    ALLOWED_HOSTS = ["*"]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-ALLOWED_HOSTS = []
-DEBUG = True
 
 ROOT_URLCONF = "core.urls"
 
@@ -21,5 +26,5 @@ TEMPLATES = [{
 MIDDLEWARE = []
 
 STATIC_URL = "/assets/"
-STATIC_ROOT = os.path.abspath(f"{BASE_DIR}/../static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 SASS_PROCESSOR_ROOT = os.path.abspath(f"{BASE_DIR}/core/static")

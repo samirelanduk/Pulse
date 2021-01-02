@@ -1,36 +1,16 @@
+host="pulsehack.samireland.com"
 
-host="pulsehack.io"
+docker-compose build
 
-# Empty the current source directory on the server
-ssh $host "rm -r ~/$host/source/* >& /dev/null"
+docker-compose push
 
-# Work out which files to send
-files="`git ls-files`"
+ssh -t $host "mkdir pulse"
 
-# Make server directory structure
-commands=()
-for f in $files; do
-    dir=`dirname $f`
-    commands+=("mkdir -p ~/$host/source/$dir;")
-done
-ssh $host "${commands[@]}"
+scp production.yml $host:~/pulse/docker-compose.yml
+scp secrets.env $host:~/pulse/
 
-# Copy files to server one by one
-for f in $files; do
-    scp $f $host:~/$host/source/$f
-done
+ssh $host "cd pulse && docker-compose pull"
+ssh $host "cd pulse && docker-compose up --remove-orphans -d"
+ssh $host "cd pulse && docker network connect bridge pulse_nginx_1 2>/dev/null"
 
-# Copy secrets
-scp core/secrets.py $host:~/$host/source/core/secrets.py
-
-# Turn off debug on server
-ssh $host "sed -i s/\"DEBUG = True\"/\"DEBUG = False\"/g ~/$host/source/core/settings.py"
-
-# Add allowed host
-ssh $host "sed -i s/\"HOSTS = \[\]\"/\"HOSTS = \['$host'\]\"/g ~/$host/source/core/settings.py"
-
-# Install pip packages
-ssh $host "~/$host/env/bin/pip install -r ~/$host/source/requirements.txt"
-
-# Move static files
-ssh $host "cd ~/$host/source && ../env/bin/python manage.py collectstatic --noinput"
+ssh $host "rm -r pulse"

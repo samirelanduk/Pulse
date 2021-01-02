@@ -1,0 +1,22 @@
+services:
+  django:
+    image: samirelanduk/pulse_django
+    env_file:
+      - secrets.env
+    volumes:
+      - static_volume:/home/app/static
+    ports:
+      - 8000:80
+  nginx:
+    image: samirelanduk/pulse_nginx
+    volumes:
+      - static_volume:/home/app/static
+    depends_on:
+      - django
+    expose:
+      -  80
+    environment:
+      - VIRTUAL_HOST=pulsehack.samireland.com
+      - LETSENCRYPT_HOST=pulsehack.samireland.com
+volumes:
+  static_volume:

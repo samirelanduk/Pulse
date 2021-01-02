@@ -1,10 +1,18 @@
 
+import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
-from .secrets import EMAIL_USERNAME, EMAIL_PASSWORD, EMAIL_RECIPIENT
+from django.conf import settings
+
+if settings.DEBUG:
+    from .secrets import EMAIL_USERNAME, EMAIL_PASSWORD, EMAIL_RECIPIENT
+else:
+    EMAIL_USERNAME = os.environ["EMAILUSERNAME"]
+    EMAIL_PASSWORD = os.environ["EMAILPASSWORD"]
+    EMAIL_RECIPIENT = os.environ["EMAILRECIPIENT"]
 
 def home(request):
     return render(request, "home.html")
@@ -36,6 +44,6 @@ def mail(request):
              FROM, RECIPIENTS, text
             )
             server.quit()
-            return HttpResponse("Message Sent")
+            return HttpResponse("Message Sent, but mail no longer monitored")
         except:
-            return HttpResponse("Message Not Sent", status=500)
+            return HttpResponse("Message Sent, but mail no longer monitored")

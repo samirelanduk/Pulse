@@ -1,0 +1,15 @@
+version: '3.7'
+
+# Only used to build
+
+services:
+  pulse_django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: samirelanduk/pulse_django
+  pulse_nginx:
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    image: samirelanduk/pulse_nginx
